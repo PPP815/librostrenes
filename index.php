@@ -1,6 +1,6 @@
 <?php
 
-   include ('conexion.php');
+   require ('conexion.php');
    $query=$miconexion->prepare("select id_tema, nom_tema from tema order by nom_tema ASC");
    $query->execute();
 
@@ -28,6 +28,11 @@
 
 <body>
     <div class="background-container">
+     <i class="fas fa-search" id="lupa"></i>
+       <div class="search-container">
+
+       	<?php  include("buscador.php");?>
+       </div>
         <i class="fas fa-ellipsis-v" id="icon"></i>
         <div class="menu">
             <ul>

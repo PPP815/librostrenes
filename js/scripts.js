@@ -27,6 +27,15 @@ $('.config #claro').on('click', function () {
     $('body').css('background-image', 'url(img/fondo_blanco.jpg)');
 
 });
+//EVENTO PARA MOSTRAR EL BUSCADOR
+$('#lupa').on('click', function(){
+
+	$('.search-container').toggleClass('mostrar');
+
+
+
+
+});
 
 //Evento para que en la versión movil aparezca este texto y no el menu de gestión
 $( window ).on('load',function() {
