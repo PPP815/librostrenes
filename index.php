@@ -7,9 +7,6 @@
 	$query2=$miconexion->prepare("select ruta from libros");
 	$query2->execute()
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +42,7 @@
                 <li><a href="stats.php" target="_blank" class="info"><i class="fas fa-chart-pie"></i>Ver Estadísticas</a></li>
                 <li><a href="contactar.html" class="info"><i class="far fa-envelope-open"></i> Contacto</a></li>
                 <li><a href="version.html" class="info"><i class="fas fa-code-branch"></i> Versión</a></li>
+                <li><a href="audio-files.html" class="info"><i class="far fa-file-audio"></i> Audios</a></li>
                 <div class="config">
                     <li><a href="#" id="oscuro">Dark Theme</a></li>
                     <li><a href="#" id="claro">Light Theme</a></li>

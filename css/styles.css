@@ -44,6 +44,7 @@ img {
 	background-repeat: no-repeat;
 	background-position: left;
 	min-height: 100vh;
+	position: relative;
 
 }
 
@@ -684,7 +685,30 @@ dd {
 .mostrar {
 	transform: translateX(0);
 }
-
+/*ESTILOS PÁGINA DE ARCHIVOS DE AUDIO*/
+#audio-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 1em;
+	height: 90vh;
+}
+#audio-container p{
+	margin: 0.5em;
+	text-transform: capitalize;
+	color: #fff;
+	font-weight: bold
+}
+audio:hover, audio:focus, audio:active{
+	box-shadow: 15px 15px 20px rgba(0,0,0,0.4);
+	transform: scale(1.05);
+}
+audio{
+	transition: all 0.5s linear;
+	box-shadow: 2px 2px 4px 0px #006773;
+	border-radius: 7px;
+}
 @-webkit-keyframes popup {
 	0% {
 		width: 0rem;

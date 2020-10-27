@@ -7,6 +7,7 @@ require ('conexion.php');
     $query = $miconexion->prepare("SELECT
     autores.nombre,
     autores.apellido,
+	libros.id_libro,
     libros.titulo,
     libros.ruta,
     tema.id_tema,
@@ -72,7 +73,7 @@ require ('conexion.php');
                     <p><?php echo $fila['isbn'] ?></p>
                     <p>Tema</p>
                     <p><?php echo $fila['nom_tema'] ?></p>
-        </div>
+                    </div>
         <?php
         }else{
              echo "<p id='error'>No hay libros sobre este tema</p>";
