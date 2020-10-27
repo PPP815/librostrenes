@@ -14,8 +14,7 @@
 		<div class="main-container">
 			<form action="buscador_rdos.php" method="get" id="form-reg" enctype="multipart/form-data">
 
-				<label for="buscar">Buscador</label>
-				<input type="text" id="buscar" name="buscar" placeholder="escriba término a buscar">
+				<input type="text" id="buscar" name="buscar" placeholder="Escriba término a buscar">
 				<input type="submit" value="Buscar" name="submit">
 			</form>
 

@@ -1,6 +1,6 @@
 <?php
 require('InformesPDF/fpdf.php');
-
+header('Content-type: application/download;filename="doc.pdf"');
 class PDF extends FPDF
 {
 // Cabecera de página
@@ -51,7 +51,6 @@ while($row = $consulta->fetch(PDO::FETCH_ASSOC)){
     $pdf->Cell(25, 10, $row['anno'],1,1,'C',0);
 }
 
-
-
+$pdf->Output('doc.pdf','F');
 $pdf->Output();
 ?>

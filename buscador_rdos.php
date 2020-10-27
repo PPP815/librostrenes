@@ -29,7 +29,10 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Buscador Resultados</title>
+    <title>Resultados de la Búsqueda</title>
+    <meta name="description" content="Resultado del buscador">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
 	<script src="https://kit.fontawesome.com/973802f786.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
@@ -67,17 +70,17 @@
                     <p>Año Publicaión</p>
                     <p><?php echo $fila['anno'] ?></p>
                     <p>Nº páginas</p>
-                     <p>Tema</p>
+                    <p>Tema</p>
                     <p><?php echo $fila['nom_tema'] ?></p>
         	</div>
 
         <?php
 			}
 		 }else{
-			 echo "<p id='error'>No éxisten registros para ese criterio</p>";
+			 echo "<p id='error'><i class='fas fa-times-circle'></i> No éxisten registros para ese criterio</p>";
 		 }
 		}else{
-			echo "<p id='error'>Escriba un criterio de búsqueda</p>";
+			echo "<p id='error'><i class='fas fa-times-circle'></i> Escriba un criterio de búsqueda</p>";
 		}
 			?>
    		 </div>
@@ -85,6 +88,12 @@
 	</div>
 
 </div>
-
+<div class="go-top-container">
+        <div class="go-top-button" title="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/gotop.js"></script>
 </body>
 </html>

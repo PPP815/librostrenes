@@ -14,18 +14,22 @@ $('#icon').on('click', function () {
 $('.config #oscuro').on('click', function () {
 
     $('.background-container').css('background-image', 'url(../img/fondo_oscuro.jpg)');
-    $('#icon').css('color', 'white');
-    $('h1').css('color', 'white');
+    $('#icon').css('color', '#fff');
+    $('h1').css('color', '#fff');
     $('body').css('background-image', 'url(img/fondo_oscuro.jpg)');
+	$('#lupa').css('color', '#fff');
+	$('ul.mostrar').css('background-color', '#fff');
 });
 
 $('.config #claro').on('click', function () {
 
-    $('body').css('background-color', '#e5ded4');
-    $('#icon').css('color', 'black');
-    $('h1').css('color', 'black');
+    $('.background-container').css('background-image', 'url(../img/fondo_blanco.jpg)');
+    $('#icon').css('color', '#000000');
+    $('h1').css('color', '#000000');
     $('body').css('background-image', 'url(img/fondo_blanco.jpg)');
-
+	$('footer').css('background-color', '#000000');
+	$('#lupa').css('color', '#000000');
+	$('ul.mostrar').css('background-color', '#ffe5c5');
 });
 //EVENTO PARA MOSTRAR EL BUSCADOR
 $('#lupa').on('click', function(){

@@ -1,8 +1,14 @@
 <?php
 
    require ('conexion.php');
-   $query=$miconexion->prepare("select id_tema, nom_tema from tema order by nom_tema ASC");
-   $query->execute();
+	$query=$miconexion->prepare("select id_tema, nom_tema from tema order by nom_tema ASC");
+	$query->execute();
+   	//query para las imágenes
+	$query2=$miconexion->prepare("select ruta from libros");
+	$query2->execute()
+
+
+
 
 ?>
 
@@ -30,7 +36,6 @@
     <div class="background-container">
      <i class="fas fa-search" id="lupa"></i>
        <div class="search-container">
-
        	<?php  include("buscador.php");?>
        </div>
         <i class="fas fa-ellipsis-v" id="icon"></i>
@@ -55,26 +60,26 @@
         </div>
 
         <div class="main-container">
-            <h1 id="main-head">Libros Ferrocarril</h1>
-            <div class="index-container">
 
-                <form name="miformulario" action="vista_rdos.php" method="get">
-                    <select name="desplegable" required>
-                        <option value="" selected>Buscar por Tema
-                        </option>
-                        <?php
+			<h1 id="main-head">Libros Ferrocarril</h1>
+ <div class="index-container">
+
+ 	<form name="miformulario" action="vista_rdos.php" method="get">
+ 		<select name="desplegable" required>
+ 			<option value="" selected>Buscar por Tema
+ 			</option>
+ 			<?php
                 while($rgto = $query->fetch(PDO::FETCH_ASSOC))
                 {
                     ?>
-                        <option value="<?php echo $rgto["id_tema"]?>"><?php echo $rgto["nom_tema"]?></option>
-                        <?php
+ 			<option value="<?php echo $rgto["id_tema"]?>"><?php echo $rgto["nom_tema"]?></option>
+ 			<?php
                 }
                     ?>
-                        <input type="submit" value="Consultar" name="submit">
-                    </select>
-                </form>
-            </div>
-
+ 			<input type="submit" value="Consultar" name="submit">
+ 		</select>
+ 	</form>
+ </div>
         </div>
 
         <footer>
