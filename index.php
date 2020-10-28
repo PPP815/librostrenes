@@ -35,9 +35,10 @@
        <div class="search-container">
        	<?php  include("buscador.php");?>
        </div>
-        <i class="fas fa-ellipsis-v" id="icon"></i>
+        <i class="fas fa-ellipsis-v" id="icon" title="Mostrar Menú"></i>
         <div class="menu">
             <ul>
+                <i class="fas fa-times" title="Ocultar Menú"></i>
                 <li><a href="informesPDF.php" target="_blank" class="info"><i class="far fa-file-pdf"></i> Ver colección en PDF</a></li>
                 <li><a href="stats.php" target="_blank" class="info"><i class="fas fa-chart-pie"></i>Ver Estadísticas</a></li>
                 <li><a href="contactar.html" class="info"><i class="far fa-envelope-open"></i> Contacto</a></li>

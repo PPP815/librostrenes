@@ -4,12 +4,14 @@ $('img').on('click', function () {
     $('#seleccion').text(titulo);
 
 });
-//Evento del botón menú
+//Evento del botón menú abrir y equis para cerrar
 $('#icon').on('click', function () {
-    $('.menu ul').toggleClass('mostrar');
+    $('.menu ul').addClass('mostrar');
+});
+$('.fa-times').on('click',function () {
+	$('.menu ul').removeClass('mostrar');
 
 });
-
 //Eventos para la selección de tema
 $('.config #oscuro').on('click', function () {
 

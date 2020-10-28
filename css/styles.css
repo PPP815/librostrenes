@@ -97,6 +97,18 @@ img {
 	margin: 0 10px;
 	color: #fff;
 }
+.fa-times{
+	position: absolute;
+	top: 0.5em;
+	left: 0.5em;
+	cursor: pointer;
+}
+.fa-times:hover{
+	color: red;
+	transform: rotate(90deg);
+	transition: all 0.5s;
+
+}
 
 .main-container {
 	display: -webkit-box;
