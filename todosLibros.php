@@ -18,6 +18,9 @@
 
 
 <body>
+  <div class="container-progressbar">
+  	<div class="progressbar"></div>
+  </div>
    <div class="background-container">
     <a href="index.php" id="linkBack" title="Ir a Index"><i class="fas fa-home"></i></a>
     <span id="seleccion" class="active">Haga click en el libro para ver aquí su titulo</span>
@@ -42,5 +45,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/gotop.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@ require ('conexion.php');
     tema.id_tema,
     tema.nom_tema,
     editorial.nom_editorial,
+	editorial.email,
     idioma.nom_idioma,
     libros.anno,
     libros.num_paginas,
@@ -42,6 +43,9 @@ require ('conexion.php');
 </head>
 
 <body>
+  <div class="container-progressbar">
+  	<div class="progressbar"></div>
+  </div>
    <div class="background-container">
     <a href="index.php" id="linkBack" title="Ir a Index"><i class="fas fa-home"></i></a>
     <h2 id="rdos">Resultados</h2>
@@ -62,7 +66,7 @@ require ('conexion.php');
                     <p>Autor</p>
                     <p><?php echo $fila['nombre'] . ' ' . $fila['apellido'] ?></p>
                     <p>Editorial</p>
-                    <p><?php echo $fila['nom_editorial'] ?></p>
+					<p><a href="<?php echo $fila['email']?>"><?php echo $fila['nom_editorial'] ?></a></p>
                     <p>Idioma</p>
                     <p><?php echo $fila['nom_idioma'] ?></p>
                     <p>Año Publicaión</p>
@@ -89,6 +93,7 @@ require ('conexion.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/gotop.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 
 </html
