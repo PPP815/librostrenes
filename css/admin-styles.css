@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+ul li {
+    list-style: none;
+
+}
+body{
+   font-family: sans-serif;
+   overflow-x: hidden;
+}
+
+.header-admin {
+    background-color: steelblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+.header-admin h3 a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.header-admin .controles {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-admin .controles p {
+    margin-right: 0.5em;
+    color:#fff;
+}
+
+.header-admin .controles a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-left{
+    width: 100%;
+
+}
+.main-right{
+    width: 100%;
+    padding: 1em;
+    margin: 0.5em;
+    position: relative;
+
+}
+
+.page-admin{
+    padding: 1em;
+    margin: 0.5em;
+
+}
+.page-admin h2{
+    background-color: steelblue;
+    color: #fff;
+    padding: 0.5em;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+.page-admin a{
+    text-decoration: none;
+}
+.page-admin li{
+    margin-bottom: 0.5em;
+}
+.page-admin i{
+    color: steelblue;
+}
+/* ESTILOS PARA LOS FORMULARIOS */
+#form-reg h2{
+    color: steelblue;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.img__container{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+
+
+}
+.img__container img{
+    width: 100%;
+}
+.inputFile #files{
+    visibility: hidden;
+
+
+}
+.inputFile .btn{
+    display: inline-block;
+    background-color: steelblue;
+    color: #fff;
+    padding: 0.5em;
+    margin-bottom: 0;
+    cursor: pointer;
+
+}
+.inputs label{
+     margin: 1em 0;
+}
+.inputs input{
+    padding: 0.5em 0;
+    border: 0;
+    border-bottom: 1px solid steelblue;
+}
+
+.inputs select{
+    outline: none;
+    padding: 0.5em 0;
+}
+input[type='file']{
+    border: 0;
+    margin: 0.5em 0;
+}
+input[type='submit']{
+    margin-top: 1.2em;
+    border: none;
+    cursor: pointer;
+    background-color: dodgerblue;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+input:focus{
+    outline: none;
+}
+/* ESTILOS PARA LOS MENSAJES DE FEEDBACK */
+#ok, #error{
+    color: #fff;
+    padding: 0.5em;
+}
+#ok{
+    background-color: rgb(7, 143, 7);
+
+}
+#error{
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+}
+/* ESTILOS TABLA MODIFICACIÓN LIBROS */
+table{
+    width: 100%;
+}
+th{
+    text-align: left;
+    background-color: rgb(70, 130, 180,0.3);
+    padding: 0.5em;
+}
+.lista td{
+   padding:0.5em;
+}
+.lista tr:nth-child(even){
+    background-color: rgb(187, 185, 185,0.3);
+
+}
+.lista a{
+    text-decoration: none;
+    color: #000;
+}
+/* ESTILOS PARA LA PÁGINA DE LOGIN */
+.main__container-login{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   padding: 1.5em;;
+   align-items: center;
+   background-color: lightblue;
+
+}
+
+.main__container-login #form-reg{
+   width: 100%;
+}
+.main__container-login input[type='email'],
+.main__container-login input[type='password']{
+    background-color:transparent;
+}
+/* ESTILOS PÁGINA DE ERROR LOGIN */
+.container__error{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container__error p{
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+    color: #fff;
+}
+.container__error p a{
+    text-transform: uppercase;
+    color: #fff;
+}
+/* ESTILOS PARA LA PÁGINA 'VACIO.PHP' */
+.container__img{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%,-50%);
+    transition: all 0.5s;
+
+
+}
+.container__img:hover{
+    box-shadow: 10px 10px 42px 0px rgba(0,0,0,0.55);
+
+}
+/* ESTILOS PARA LA PÁGINA DE REGISTROS DE USUARIOS */
+.main__container-users{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+
+}
+.main__container-users #form-reg{
+    width: 100%;
+
+}
+.main__container-users input[type='text'],
+.main__container-users input[type='email'],
+.main__container-users input[type='password']{
+    background-color: transparent;
+}
+/* ESTILOS PARA EL LINK DE BORRAR */
+.borrar{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 0.5em;
+    color: red;
+
+
+}
+@media (max-width: 1000px){
+    .container__img{
+        display: none;
+    }
+    .header-admin{
+        font-size: 2.5vw;
+    }
+    .main-right {
+        margin: 0;
+        position: relative;
+        overflow-x: auto;
+
+    }
+    .main-container .lista tr,td{
+        display: block;
+    }
+    .main-container .lista th{
+        display: none;
+    }
+    .main-container .lista .quien{
+        display: none;
+    }
+
+}
+
+@media (min-width: 1000px){
+    .main-admin{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .main-left{
+        width: 30%;
+    }
+    .main-right{
+        width: 70%;
+
+    }
+    #form-reg{
+        max-width: 500px;
+    }
+    .book__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #form-reg{
+        width: 100%;
+    }
+
+}
