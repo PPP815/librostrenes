@@ -173,14 +173,14 @@ th{
     background-color: rgb(70, 130, 180,0.3);
     padding: 0.5em;
 }
-.lista td{
+.display td{
    padding:0.5em;
 }
-.lista tr:nth-child(even){
+.display tr:nth-child(even){
     background-color: rgb(187, 185, 185,0.3);
 
 }
-.lista a{
+.display a{
     text-decoration: none;
     color: #000;
 }
@@ -275,14 +275,22 @@ th{
         overflow-x: auto;
 
     }
-    .main-container .lista tr,td{
+    .display tr,td{
         display: block;
     }
-    .main-container .lista th{
+    .display thead{
         display: none;
     }
-    .main-container .lista .quien{
+    .display .quien{
         display: none;
+    }
+    .dataTables_paginate{
+        font-size: 0.6em;
+        margin-bottom: 2em;
+        padding: 0;
+    }
+    .dataTables_info{
+        font-size: 0.8em;
     }
 
 }

@@ -11,45 +11,30 @@ if(isset($_SESSION['logeado']))
 
 
 ?>
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificación de Editoriales</title>
-</head>
-<body>
-
-<div class="main-container">
-        <h2>Lista de Editoriales</h2>
-        <table class="lista">
+<table id="coleccion" class="display">
+    <thead>
+        <tr>
             <th>Id</th>
             <th>Editorial</th>
-            <th>Correo Electrónico</th>
-
-            <?php
-                while($fila = $sent_select->fetch(PDO::FETCH_ASSOC)){
-
-                    ?>
-                    <tr>
-                    <td><a href="admin.php?pagina=boton13&dato=<?php echo $fila['id_editorial'];?>"><?php echo $fila['id_editorial']; ?></a></td>
-                    <td><a href="admin.php?pagina=boton13&dato=<?php echo $fila['id_editorial'];?>"><?php echo $fila['nom_editorial']; ?></a></td>
-                    <td><a href="admin.php?pagina=boton13&dato=<?php echo $fila['id_editorial'];?>"><?php echo $fila['email']; ?></a></td>
-
-                <?php
-                }
+            <th>Correo Electrónico</th>           
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            while ($row = $sent_select->fetch(PDO::FETCH_ASSOC)){
                 ?>
-
-            </table>
-        </div>
+        <tr>
+            <td><a href="admin.php?pagina=boton13&dato=<?php echo $row['id_editorial'];?>"><?php echo $row['id_editorial']; ?></a></td>
+            <td><a href="admin.php?pagina=boton13&dato=<?php echo $row['id_editorial'];?>"><?php echo $row['nom_editorial']; ?></a></td>
+            <td><a href="admin.php?pagina=boton13&dato=<?php echo $row['id_editorial'];?>"><?php echo $row['email']; ?></a></td>
+        </tr>
+        <?php
+            }
+            ?>
+    </tbody>
+</table>
 <?php
 }else{
   header('Location: error.php');
 }
 ?>
-
-</body>
-</html>

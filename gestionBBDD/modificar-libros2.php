@@ -18,20 +18,6 @@ if(isset($_SESSION['logeado']))
     $query->execute();
 
 ?>
-
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Información del Libro</title>
-    <meta name="description" content="Modificar Discos 2">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-
-<body>
-
     <div class="main-container">
         <div class="book__container">
             <form id="form-reg" action="gestionBBDD/modificar-libros3.php" method="post" enctype="multipart/form-data">
@@ -77,6 +63,3 @@ if(isset($_SESSION['logeado']))
   header('Location: error.php');
 }
 ?>
-</body>
-
-</html>

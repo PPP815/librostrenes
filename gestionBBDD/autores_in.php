@@ -35,19 +35,6 @@ if(isset($_SESSION['logeado']))
 
 
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Alta Autores</title>
-    <meta name="description" content="alta autores">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-
-<body>
         <div class="main-container">
             <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" id="form-reg">
                 <div class="inputs">
@@ -65,6 +52,3 @@ if(isset($_SESSION['logeado']))
   header('Location: error.php');
 }
 ?>
-</body>
-
-</html>

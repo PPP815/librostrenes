@@ -16,6 +16,7 @@ if(isset($_SESSION['logeado']))
     <title>Administración del Sitio</title>
     <script src="https://kit.fontawesome.com/973802f786.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/admin-styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -108,6 +109,19 @@ if(isset($_SESSION['logeado']))
 
 
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#coleccion').DataTable( {
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+                }
+            } );
+        } );
+        </script>
 <?php
 }else{
   header('Location: error.php');

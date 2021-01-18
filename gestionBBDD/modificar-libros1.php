@@ -12,48 +12,35 @@ if(isset($_SESSION['logeado']))
 
 
 ?>
-
-
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificación de Libros</title>
-</head>
-<body>
-
-<div class="main-container">
-        <h2>Lista de Libros</h2>
-        <table class="lista">
+<table id="coleccion" class="display">
+    <thead>
+        <tr>
             <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Titulo</th>
-            <th>Año</th>
-            <th>Tema</th>
-
-            <?php
-                while($fila = $sent_select->fetch(PDO::FETCH_ASSOC)){
-
-                    ?>
-                    <tr>
-                    <td class="quien" ><a href="admin.php?pagina=boton6&dato=<?php echo $fila['id_libro'];?>"><?php echo $fila['nombre']; ?></a></td>
-                    <td class="quien"><a href="admin.php?pagina=boton6&dato=<?php echo $fila['id_libro'];?>"><?php echo $fila['apellido']; ?></a></td>
-                    <td><a href="admin.php?pagina=boton6&dato=<?php echo $fila['id_libro'];?>"><?php echo $fila['titulo']; ?></a></td>
-                    <td><a href="admin.php?pagina=boton6&dato=<?php echo $fila['id_libro'];?>"><?php echo $fila['anno']; ?></a></td>
-                    <td><a href="admin.php?pagina=boton6&dato=<?php echo $fila['id_libro'];?>"><?php echo $fila['nom_tema']; ?></a></td>
-                    </tr>
-                <?php
-                }
+            <th>Apellido</th>          
+            <th>Título</th>          
+            <th>Año</th>          
+            <th>Tema</th>          
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            while ($row = $sent_select->fetch(PDO::FETCH_ASSOC)){
                 ?>
+        <tr>
+            <td class="quien" ><a href="admin.php?pagina=boton6&dato=<?php echo $row['id_libro'];?>"><?php echo $row['nombre']; ?></a></td>
+            <td class="quien"><a href="admin.php?pagina=boton6&dato=<?php echo $row['id_libro'];?>"><?php echo $row['apellido']; ?></a></td>
+            <td><a href="admin.php?pagina=boton6&dato=<?php echo $row['id_libro'];?>"><?php echo $row['titulo']; ?></a></td>
+            <td><a href="admin.php?pagina=boton6&dato=<?php echo $row['id_libro'];?>"><?php echo $row['anno']; ?></a></td>
+            <td><a href="admin.php?pagina=boton6&dato=<?php echo $row['id_libro'];?>"><?php echo $row['nom_tema']; ?></a></td>
+        </tr>
+        <?php
+            }
+            ?>
+    </tbody>
+</table>
 
-            </table>
-    </div>
 <?php
 }else{
   header('Location: error.php');
 }
 ?>
-</body>
-</html>

@@ -15,21 +15,6 @@ if(isset($_SESSION['logeado']))
     $fila = $sent_select->fetch(PDO::FETCH_ASSOC);
 
 ?>
-
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Información del Usuario</title>
-    <meta name="description" content="Modificar Discos 2">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-</head>
-
-<body>
-
     <div class="main-container">
 
         <form id="form-reg" action="gestionBBDD/modificar-usuario3.php" method="post">
@@ -57,6 +42,3 @@ if(isset($_SESSION['logeado']))
   header('Location: error.php');
 }
 ?>
-</body>
-
-</html>
