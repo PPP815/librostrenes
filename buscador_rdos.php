@@ -98,5 +98,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/gotop.js"></script>
     <script src="js/scroll.js"></script>
+	<div class="last"></div>
 </body>
 </html>

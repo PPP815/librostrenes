@@ -71,7 +71,7 @@ if(isset($_SESSION['logeado']))
          $insert_query->bindParam(':id_editorial',$editorial);
          $insert_query->execute();
 
-         header("Refresh: 5; URL=../admin.php?pagina=boton3");
+         header("Refresh: 1; URL=../admin.php?pagina=boton3");
          echo "<p id='ok'>Registro dado de alta con éxito</p>";
 
         }
@@ -85,7 +85,7 @@ if(isset($_SESSION['logeado']))
 
 }else{
 
-    header("Refresh: 5; URL=../admin.php?pagina=boton3");
+    header("Refresh: 1; URL=../admin.php?pagina=boton3");
     echo "<p id='error'>El registro ya éxiste en la BBDD</p>";
 }
 }

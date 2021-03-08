@@ -1,3 +1,6 @@
+//VARIABLES
+let url;
+
 //Evento para mostrar titulo de cada libro al hacer click
 $('img').on('click', function () {
     var titulo = $(this).attr('title');
@@ -13,26 +16,24 @@ $('.fa-times').on('click',function () {
 
 });
 //Eventos para la selección de tema
-$('.config #oscuro').on('click', function () {
-
-    $('.background-container').css('background-image', 'url(../img/fondo_oscuro.jpg)');
-    $('#icon').css('color', '#fff');
-    $('h1').css('color', '#fff');
-    $('body').css('background-image', 'url(img/fondo_oscuro.jpg)');
-	$('#lupa').css('color', '#fff');
-	$('ul.mostrar').css('background-color', '#fff');
+$('.fa-cog').on('click', function(){
+    $('.config').toggleClass('mostrar');
+})
+$('.config li a').on('click', function (event) {
+    event.preventDefault();
+    url = 'url(' + $(this).data('src') + ')';
+    
+   
+    $('.background-container').css('background-image', url);
+    $('#oscuro').css('background','#fff');
+    $('#oscuro').css('color','#000');
+    $('#main-head').css('color','#fff');
+    $('#lupa').css('color','#fff');
+    $('#icon').css('color','#fff');
+    $('.fa-cog').css('color','#fff');
+   
 });
 
-$('.config #claro').on('click', function () {
-
-    $('.background-container').css('background-image', 'url(../img/fondo_blanco.jpg)');
-    $('#icon').css('color', '#000000');
-    $('h1').css('color', '#000000');
-    $('body').css('background-image', 'url(img/fondo_blanco.jpg)');
-	$('footer').css('background-color', '#000000');
-	$('#lupa').css('color', '#000000');
-	$('ul.mostrar').css('background-color', '#ffe5c5');
-});
 //EVENTO PARA MOSTRAR EL BUSCADOR Y DIFUMINAR EL TITULO Y EL BUSCADOR DE TEMAS
 $('#lupa').on('click', function(){
 
@@ -42,10 +43,6 @@ $('#lupa').on('click', function(){
 
 });
 
-//Evento para que en la versión movil aparezca este texto y no el menu de gestión
-$( window ).on('load',function() {
-  $( "#gestion" ).append( "<p class='ocultar'>Este menú no está disponible en la versión para móviles</p>" );
-});
 //Inhabilitar botón derecho del ratón
 $(function(){
     $(document).bind("contextmenu",function(e){

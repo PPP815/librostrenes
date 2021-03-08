@@ -30,15 +30,17 @@ if(isset($_SESSION['logeado']))
               <td><?php echo $row['nombre']; ?></td>
               <td><?php echo $row['apellidos']; ?></td>
               <td><?php echo $row['usuario']; ?></td>
-              <td title="ADMINISTRADOR"><?php echo $row['user_type']; ?></td>
+              <td title="ADMINISTRADOR" id="admin"><?php echo $row['user_type']; ?></td>
+              </tr>
               <?php
                   }else{
                       ?>
-                      <tr>
+              <tr>
               <td><a href="admin.php?pagina=boton9&dato=<?php echo $row['id'];?>"><?php echo $row['nombre']; ?></a></td>
               <td><a href="admin.php?pagina=boton9&dato=<?php echo $row['id'];?>"><?php echo $row['apellidos']; ?></a></td>
               <td><a href="admin.php?pagina=boton9&dato=<?php echo $row['id'];?>"><?php echo $row['usuario']; ?></a></td>
               <td><a href="admin.php?pagina=boton9&dato=<?php echo $row['id'];?>"><?php echo $row['user_type']; ?></a></td>
+              </tr>
               <?php
               }
           }

@@ -47,6 +47,7 @@ if(isset($_SESSION['logeado']))
                 </div>
             </form>
         </div>
+
 <?php
 }else{
   header('Location: error.php');

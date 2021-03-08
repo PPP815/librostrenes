@@ -31,7 +31,7 @@
 
 <body>
     <div class="background-container">
-     <i class="fas fa-search" id="lupa"></i>
+     <i class="fas fa-search" id="lupa" title="buscar"></i>
        <div class="search-container">
        	<?php  include("buscador.php");?>
        </div>
@@ -39,19 +39,15 @@
         <div class="menu">
             <ul>
                 <i class="fas fa-times" title="Ocultar Menú"></i>
-                <li><a href="informesPDF.php" target="_blank" class="info"><i class="far fa-file-pdf"></i> Ver colección en PDF</a></li>
+                <!-- <li><a href="informesPDF.php" target="_blank" class="info"><i class="far fa-file-pdf"></i> Ver colección en PDF</a></li> -->
+                <li><a href="todosLibros.php" class="info"><i class="fas fa-book-open"></i> Ver todos los libros</a></li>
                 <li><a href="stats.php" target="_blank" class="info"><i class="fas fa-chart-pie"></i>Ver Estadísticas</a></li>
-                <li><a href="contactar.html" class="info"><i class="far fa-envelope-open"></i> Contacto</a></li>
-                <li><a href="version.html" class="info"><i class="fas fa-code-branch"></i> Versión</a></li>
+                <li><a href="acercade.html" class="info"><i class="fas fa-info"></i> Acerca de...</a></li>
                 <li><a href="audio-files.html" class="info"><i class="far fa-file-audio"></i> Audios</a></li>
-                <div class="config">
-                    <li><a href="#" id="oscuro">Dark Theme</a></li>
-                    <li><a href="#" id="claro">Light Theme</a></li>
-                </div>
-
+               
                 <div id="gestion">
                     <p><i class="fab fa-elementor"></i> Menú Gestión</p>
-                    <li><a href="login.php">Panel de Administración</a></li>
+                    <li><a href="login.php"><i class="fas fa-unlock"></i> Ir al panel de administración</a></li>
 
                 </div>
             </ul>
@@ -81,12 +77,23 @@
 
 
         <footer>
-            <a href="todosLibros.php" id="ver_lista">Ver todos los libros</a>
+            <a href="#" title="Ir a Configuración"><i class="fas fa-cog"></i></a>
+            <div class="config">
+            <li><a href="" data-src="img/fondo_oscuro.jpg" class="oscuro">Dark Theme</a></li>
+            <li><a href="" data-src="img/blueWaves.jpg"class="claro">Ondas</a></li>
+            <li><a href="" data-src="img/balasto.jpg" class="oscuro">Balasto</a></li>
+            <li><a href="" data-src="img/ladrillos.jpg" class="claro">Ladrillos</a></li>
+            <li><a href="" data-src="img/negroTiza.jpg" class="oscuro">Pizarra</a></li>
+            <li><a href="" data-src="img/paisaje.jpg"  class="claro">Paiseje</a></li>
+            <li><a href="" data-src="img/pared.jpg"  class="oscuro">Pared</a></li>
+            <li><a href="" data-src="img/via.jpg"  class="claro">Vía</a></li>
+            </div>
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/scripts.js"></script>
     </div>
+<div class="last"></div>
 </body>
 
 

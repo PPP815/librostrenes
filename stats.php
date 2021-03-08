@@ -30,7 +30,7 @@ include ('includes/codigo-stats.php');
 
     <div class="background-container">
         <a href="index.php" id="linkBack" title="Ir a Index"><i class="fas fa-home"></i></a>
-        <h2 id="statsH2">Estadísticas de libros por temas</h2>
+        <h2 id="statsH2">Libros por temas</h2>
         <div class="stats-container">
             <div class="theme">
                 <dl>
@@ -131,6 +131,7 @@ include ('includes/codigo-stats.php');
         </div>
     </div>
     <script src="js/gotop.js"></script>
+    <div class="last"></div>
 </body>
 
 </html>

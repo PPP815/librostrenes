@@ -89,6 +89,7 @@ if(isset($_SESSION['logeado']))
   header('Location: error.php');
 }
 ?>
+<div class="last"></div>
 </body>
 
 </html>

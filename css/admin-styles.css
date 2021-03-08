@@ -194,6 +194,13 @@ th{
    background-color: lightblue;
 
 }
+.main__container-login #form-reg {
+    width: 100%;
+    max-width: 500px;
+    opacity: 1;
+    animation: mostrar 1s ease-out;
+     
+  }
 
 .main__container-login #form-reg{
    width: 100%;
@@ -253,14 +260,20 @@ th{
 .main__container-users input[type='password']{
     background-color: transparent;
 }
+#admin{
+    background-color: rgb(70, 130, 180, 0.8);
+    color:yellow;
+}
 /* ESTILOS PARA EL LINK DE BORRAR */
 .borrar{
     display: inline-block;
     text-decoration: none;
     margin-top: 0.5em;
     color: red;
-
-
+}
+/* DIV PARA NO VISIALIZAR LA PUBLICIDAD DEL HOSTING */
+.last + div{
+    visibility: hidden;
 }
 @media (max-width: 1000px){
     .container__img{
@@ -319,4 +332,11 @@ th{
         width: 100%;
     }
 
+}
+@keyframes mostrar{
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+       
+    }
 }

@@ -47,5 +47,6 @@
     <script src="js/scripts.js"></script>
     <script src="js/gotop.js"></script>
     <script src="js/scroll.js"></script>
+    <div class="last"></div>
 </body>
 </html>

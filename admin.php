@@ -106,7 +106,7 @@ if(isset($_SESSION['logeado']))
                 }
 
                  ?>
-
+        
 
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -122,11 +122,13 @@ if(isset($_SESSION['logeado']))
             } );
         } );
         </script>
+
 <?php
 }else{
   header('Location: error.php');
 }
 ?>
+<div class="last"></div>
 
 </body>
 </html>
