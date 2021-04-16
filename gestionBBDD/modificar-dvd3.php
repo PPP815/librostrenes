@@ -66,6 +66,7 @@
         unlink($rgto['ruta']);
 
         if($tipo=='image/jpeg' or $tipo=='image/jpg' or $tipo=='image/gif' or $tipo=='image/png' and $tamano<100000)
+        
         {
 
             move_uploaded_file($temporal,$nombre);
