@@ -5,7 +5,10 @@
 	$query->execute();
    	//query para las imágenes
 	$query2=$miconexion->prepare("select ruta from libros");
-	$query2->execute()
+	$query2->execute();
+
+    $query3=$miconexion->prepare("select * from dvdybluray order by titulo ASC");
+    $query3->execute();
 
 ?>
 
@@ -41,6 +44,7 @@
                 <i class="fas fa-times" title="Ocultar Menú"></i>
                 <!-- <li><a href="informesPDF.php" target="_blank" class="info"><i class="far fa-file-pdf"></i> Ver colección en PDF</a></li> -->
                 <li><a href="todosLibros.php" class="info"><i class="fas fa-book-open"></i> Ver todos los libros</a></li>
+                <li><a href="todosdvdbluray.php" class="info"><i class="fas fa-book-open"></i> Ver todos los DVD y Blu-ray</a></li>
                 <li><a href="stats.php" target="_blank" class="info"><i class="fas fa-chart-pie"></i>Ver Estadísticas</a></li>
                 <li><a href="acercade.html" class="info"><i class="fas fa-info"></i> Acerca de...</a></li>
                 <li><a href="audio-files.html" class="info"><i class="far fa-file-audio"></i> Audios</a></li>
@@ -59,19 +63,19 @@
  <div class="index-container">
 
  	<form name="miformulario" action="vista_rdos.php" method="get">
- 		<select name="desplegable" required>
- 			<option value="" selected>Buscar por Tema
- 			</option>
- 			<?php
+ 		<select name="desplegable" id="drop-down-1">
+            <option value="" selected>Buscar por Tema</option>
+            <?php
                 while($rgto = $query->fetch(PDO::FETCH_ASSOC))
                 {
-                    ?>
- 			<option value="<?php echo $rgto["id_tema"]?>"><?php echo $rgto["nom_tema"]?></option>
- 			<?php
+                ?>
+                    <option value="<?php echo $rgto["id_tema"]?>"><?php echo $rgto["nom_tema"]?></option>
+                <?php        
                 }
-                    ?>
- 			<input type="submit" value="Consultar" name="submit">
- 		</select>
+            ?>
+        </select>
+        <input type="submit" value="Consultar" name="submit">
+ 		
  	</form>
  </div>
 

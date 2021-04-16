@@ -225,6 +225,7 @@ h2#rdos {
 
 .main-container select {
 	padding: 10px;
+	margin-bottom: 1em;
 	font-size: 1.1em;
 	background-color: var(--texto2);
 	color: var(--texto);

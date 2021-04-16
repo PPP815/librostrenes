@@ -2,8 +2,7 @@
 require ('conexion.php');
 
     $desplegable = $_GET['desplegable'];
-
-
+    
     $query = $miconexion->prepare("SELECT
     autores.nombre,
     autores.apellido,

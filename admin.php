@@ -57,6 +57,13 @@ if(isset($_SESSION['logeado']))
                         <li><a href="?pagina=boton4"><i class="fas fa-pen"></i> Editar</a></li>
                     </ul>
             </section>
+            <section class="page-admin">
+                <h2>DVD y Blu-ray</h2>
+                    <ul>
+                        <li><a href="?pagina=boton14"><i class="fas fa-plus-circle"></i> Añadir</a></li>
+                        <li><a href="?pagina=boton15"><i class="fas fa-pen"></i> Editar</a></li>
+                    </ul>
+            </section>
         </div>
         <div class="main-right">
 
@@ -101,6 +108,15 @@ if(isset($_SESSION['logeado']))
                 case "boton13":
                     include ("gestionBBDD/modificar-editorial2.php");
                     break;
+                case "boton14":
+                    include ("gestionBBDD/dvd-in.php");
+                    break;
+                case "boton15":
+                    include ("gestionBBDD/modificar-dvd1.php");
+                    break;
+                case "boton16":
+                    include ("gestionBBDD/modificar-dvd2.php");
+                    break;
                 default:
                     include ("gestionBBDD/vacio.php");
                 }
@@ -118,7 +134,7 @@ if(isset($_SESSION['logeado']))
             $('#coleccion').DataTable( {
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
-                }
+                }                
             } );
         } );
         </script>

@@ -80,6 +80,9 @@ body{
 .page-admin i{
     color: steelblue;
 }
+.page-admin:last-child h2{
+    background-color: dodgerblue;
+}
 /* ESTILOS PARA LOS FORMULARIOS */
 #form-reg h2{
     color: steelblue;
