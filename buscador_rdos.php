@@ -3,7 +3,7 @@
 
 	$buscar = $_GET["buscar"];
 
-	$query = $miconexion->prepare("SELECT libros.titulo,libros.anno,libros.ruta,autores.nombre,autores.apellido,editorial.nom_editorial,idioma.nom_idioma,pais.nom_pais,tema.nom_tema
+	$query = $miconexion->prepare("SELECT libros.titulo,libros.anno,libros.num_paginas,libros.ruta,autores.nombre,autores.apellido,editorial.nom_editorial,idioma.nom_idioma,pais.nom_pais,tema.nom_tema
 	FROM libros
 	INNER JOIN autores on libros.id_autor=autores.id_autor
 	INNER JOIN editorial on libros.id_editorial=editorial.id_editorial
@@ -72,6 +72,7 @@
                     <p>Año Publicaión</p>
                     <p><?php echo $fila['anno'] ?></p>
                     <p>Nº páginas</p>
+					<p><?php echo $fila['num_paginas'] ?></p>
                     <p>Tema</p>
                     <p><?php echo $fila['nom_tema'] ?></p>
         	</div>

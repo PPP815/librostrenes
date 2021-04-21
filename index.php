@@ -44,7 +44,7 @@
                 <i class="fas fa-times" title="Ocultar Menú"></i>
                 <!-- <li><a href="informesPDF.php" target="_blank" class="info"><i class="far fa-file-pdf"></i> Ver colección en PDF</a></li> -->
                 <li><a href="todosLibros.php" class="info"><i class="fas fa-book-open"></i> Ver todos los libros</a></li>
-                <li><a href="todosdvdbluray.php" class="info"><i class="fas fa-book-open"></i> Ver todos los DVD y Blu-ray</a></li>
+                <li><a href="todosdvdbluray.php" class="info"><i class="fas fa-film"></i> Ver todos los DVD y Blu-ray</a></li>
                 <li><a href="stats.php" target="_blank" class="info"><i class="fas fa-chart-pie"></i>Ver Estadísticas</a></li>
                 <li><a href="acercade.html" class="info"><i class="fas fa-info"></i> Acerca de...</a></li>
                 <li><a href="audio-files.html" class="info"><i class="far fa-file-audio"></i> Audios</a></li>

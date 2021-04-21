@@ -550,7 +550,7 @@ footer a {
 	font-weight: bold;
 }
 
-.theme:first-of-type {
+.theme:first-of-type, .theme:last-of-type {
 	background-color: var(--texto2);
 	text-transform: uppercase;
 }

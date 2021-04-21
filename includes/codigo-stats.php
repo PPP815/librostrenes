@@ -64,5 +64,10 @@ $vagones = $query2->rowCount();
 $query2->bindValue(1,'Varios');
 $query2->execute();
 $varios = $query2->rowCount();
+//************************************************
+//ESTADÍSTICAS SOBRE LOS DVD Y BLU-RAY
+$query_dvd = $miconexion->prepare("SELECT id FROM dvdybluray");
+$query_dvd->execute();
+$num_films = $query_dvd->rowCount();
 
 ?>

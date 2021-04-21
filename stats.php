@@ -128,6 +128,12 @@ include ('includes/codigo-stats.php');
                     <dd><?php echo $varios ?></dd>
                 </dl>
             </div>
+
+            <div class="theme">
+                <dl>
+					<dt><a href="todosdvdbluray.php">Films (DVD y Blu-ray)</a></dt>
+                    <dd><?php echo $num_films ?></dd>
+                </dl>
         </div>
     </div>
     <script src="js/gotop.js"></script>
